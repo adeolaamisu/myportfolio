@@ -404,6 +404,7 @@ section { padding: 6.5rem 7%; }
 }
 .tool-item:hover { border-color: var(--accent-mid); background: var(--accent-light); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(107,70,160,0.12); }
 .tool-item img { width: 42px; height: 42px; object-fit: contain; }
+.tool-emoji { font-size: 2rem; line-height: 1; }
 .tool-item span { font-size: 0.7rem; font-weight: 700; color: var(--muted); text-align: center; line-height: 1.2; }
 
 /* CERTS */
@@ -830,26 +831,25 @@ setInterval(() => {
 
 // TOOLS — STATIC
 const tools = [
-  { name:"Jira", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
-  { name:"Confluence", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" },
-  { name:"Notion", url:"https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
-  { name:"Figma", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name:"GitHub", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-  { name:"Postman", url:"https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-  { name:"Amplitude", url:"https://cdn.worldvectorlogo.com/logos/amplitude-1.svg" },
-  { name:"Claude", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/512px-Claude_AI_logo.svg.png" },
-  { name:"ChatGPT", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png" },
-  { name:"Lovable", url:"https://avatars.githubusercontent.com/u/167901765?s=200&v=4" },
-  { name:"Loom", url:"https://cdn.worldvectorlogo.com/logos/loom-1.svg" },
-  { name:"Swagger", url:"https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png" },
-  { name:"Tawk.to", url:"https://www.tawk.to/wp-content/uploads/2022/09/tawk.to-logo.png" },
-  
+  { name:"Jira", emoji:"📋", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+  { name:"Confluence", emoji:"📚", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" },
+  { name:"Notion", emoji:"📝", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" },
+  { name:"Figma", emoji:"🎨", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+  { name:"GitHub", emoji:"🐙", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name:"Postman", emoji:"📮", url:"https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+  { name:"Amplitude", emoji:"📊", url:"https://cdn.worldvectorlogo.com/logos/amplitude-1.svg" },
+  { name:"Claude", emoji:"🤖", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" },
+  { name:"ChatGPT", emoji:"💬", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" },
+  { name:"Lovable", emoji:"💖", url:"https://avatars.githubusercontent.com/u/167901765?s=200&v=4" },
+  { name:"Loom", emoji:"🎥", url:"https://cdn.worldvectorlogo.com/logos/loom-1.svg" },
+  { name:"Swagger", emoji:"🧾", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/swagger.svg" },
+  { name:"Tawk.to", emoji:"💬", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tawkdotto.svg" },
 ];
 const grid = document.getElementById("toolsGrid");
 tools.forEach(t => {
   const div = document.createElement("div");
   div.className = "tool-item";
-  div.innerHTML = `<img src="${t.url}" alt="${t.name}" onerror="this.style.display='none'"/><span>${t.name}</span>`;
+  div.innerHTML = `<img src="${t.url}" alt="${t.name}" onerror="this.outerHTML='<span class=&quot;tool-emoji&quot;>${t.emoji}</span>'"/><span>${t.name}</span>`;
   grid.appendChild(div);
 });
 
