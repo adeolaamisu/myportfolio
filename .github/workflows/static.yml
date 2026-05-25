@@ -39,25 +39,27 @@ jobs:
 
       - name: Show build output
         run: |
-          echo "Root files:"
+          echo "Root files after build:"
           ls -la
 
           echo ""
           echo "dist files:"
-          ls -la dist || true
+          find dist -maxdepth 3 -type f | head -100 || true
 
           echo ""
-          echo ".output files:"
-          ls -la .output || true
+          echo "dist/client files:"
+          find dist/client -maxdepth 3 -type f | head -100 || true
 
-          echo ""
-          echo ".output/public files:"
-          ls -la .output/public || true
+      - name: Add SPA fallback
+        run: |
+          if [ -f dist/client/index.html ]; then
+            cp dist/client/index.html dist/client/404.html
+          fi
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist/client
 
   deploy:
     runs-on: ubuntu-latest
