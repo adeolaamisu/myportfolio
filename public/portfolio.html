@@ -121,17 +121,27 @@ section { padding: 6.5rem 7%; }
 
 /* HERO */
 #hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: grid;
   grid-template-columns: 1fr 390px;
   gap: 5rem;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 4.5rem;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(140deg, var(--bg) 55%, #EDE4FF 100%);
 }
 
 /* Hero name */
+.hero-im {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--text);
+  margin-right: 0.45rem;
+  vertical-align: baseline;
+  letter-spacing: 0.01em;
+}
 .hero-name {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
@@ -140,9 +150,8 @@ section { padding: 6.5rem 7%; }
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--accent-dark);
-  display: block;
+  display: inline;
   line-height: 1;
-  margin-bottom: 0.5rem;
 }
 .hero-sub-name {
   font-family: var(--body);
@@ -151,7 +160,7 @@ section { padding: 6.5rem 7%; }
   color: var(--muted);
   letter-spacing: 0.04em;
   display: block;
-  margin-bottom: 2rem;
+  margin: 0.75rem 0 2rem;
 }
 
 .hero-bio {
@@ -395,6 +404,7 @@ section { padding: 6.5rem 7%; }
 }
 .tool-item:hover { border-color: var(--accent-mid); background: var(--accent-light); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(107,70,160,0.12); }
 .tool-item img { width: 42px; height: 42px; object-fit: contain; }
+.tool-emoji { font-size: 2rem; line-height: 1; }
 .tool-item span { font-size: 0.7rem; font-weight: 700; color: var(--muted); text-align: center; line-height: 1.2; }
 
 /* CERTS */
@@ -463,7 +473,7 @@ footer {
 
 <!-- TOP NAV -->
 <nav class="site-nav">
-  <a href="#hero" class="nav-brand">Adeola Tosin</a>
+  <a href="#hero" class="nav-brand">Adeola Tosin Amisu</a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -484,18 +494,18 @@ footer {
     </div>
 
     <h1 style="margin-bottom:0;">
-      <span class="hero-name">ADEOLA TOSIN</span>
+      <span class="hero-im">I'm</span><span class="hero-name">ADEOLA</span>
     </h1>
     <span class="hero-sub-name">Happy you stopped by</span>
 
-    <p class="hero-bio">Product Manager and Growth Strategist, with years of experience delivering web, internal tools and mobile products across iOS and Android. Experienced in Product Ownership, Research, and Agile Delivery.</p>
+    <p class="hero-bio">A Product Manager and Growth Strategist, with years of experience delivering web, internal tools and mobile products across iOS and Android. Experienced in Product Ownership, Research, and Agile Delivery.</p>
 
     <div class="hero-quote">I use AI as a working tool, an acceleration for work, not a replacement for thinking.</div>
 
     <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">Featured Projects</a>
-      <a href="#casestudies" class="btn btn-outline">Case Studies</a>
-      <a href="https://www.linkedin.com/in/ade-lola/" target="_blank" class="btn btn-outline">LinkedIn</a>
+      <a href="#projects" class="btn btn-primary">Projects</a>
+      <a href="#casestudies" class="btn btn-outline">Work</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
     </div>
 
     <div class="hero-stats">
@@ -560,12 +570,13 @@ footer {
     <div class="skill-icon-card"><span class="skill-icon">🤝</span><span class="skill-name">Stakeholder Management</span></div>
     <div class="skill-icon-card"><span class="skill-icon">🌐</span><span class="skill-name">Cross-functional Leadership</span></div>
     <div class="skill-icon-card"><span class="skill-icon">✅</span><span class="skill-name">End-to-end QA</span></div>
+    <div class="skill-icon-card"><span class="skill-icon">📋</span><span class="skill-name">Project Management</span></div>
   </div>
 </section>
 
 <!-- CASE STUDIES -->
 <section id="casestudies">
-  <span class="section-label">Case Studies</span>
+  <span class="section-label">Selected Projects</span>
   <h2>Writing through the work.</h2>
   <div class="cs-grid fade-in">
 
@@ -631,7 +642,7 @@ footer {
 
 <!-- PROJECTS -->
 <section id="projects">
-  <span class="section-label">Key Projects</span>
+  <span class="section-label">Featured Work</span>
   <h2>Products I've owned</h2>
   <div class="projects-grid fade-in">
 
@@ -680,7 +691,23 @@ footer {
         <div><div class="pmeta-label">Platform</div><div class="pmeta-value">Web App</div></div>
         <div><div class="pmeta-label">Focus</div><div class="pmeta-value">Onboarding, Analytics</div></div>
         <div><div class="pmeta-label">Live</div><div class="pmeta-value"><a href="https://www.banknbook.com" target="_blank" style="color:var(--accent);text-decoration:none;">Visit</a></div></div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">Product UX &amp; Research · Oct 2023 – March 2025</div>
+      <h3>WAC People</h3>
+      <p>Product UX &amp; Research Specialist at WAC People. Worked across discovery, validation, and delivery to shape data-informed product decisions.</p>
+      <div class="case-block">
+        <div><div class="case-title">Discovery</div><div class="case-text">Led interviews and surveys to identify operator pain points and improve workflow efficiency</div></div>
+        <div><div class="case-title">Delivery</div><div class="case-text">Maintained structured PRDs, user stories, and roadmaps, improving team delivery speed by 20%</div></div>
+        <div><div class="case-title">Prioritisation</div><div class="case-text">Gathered inputs from users, business stakeholders, and technical constraints to guide decision-making</div></div>
       </div>
+      <div class="project-footer">
+        <div><div class="pmeta-label">Role</div><div class="pmeta-value">Product UX &amp; Research Specialist</div></div>
+        <div><div class="pmeta-label">Period</div><div class="pmeta-value">Oct 2023 – March 2025</div></div>
+        <div><div class="pmeta-label">Live</div><div class="pmeta-value"><a href="https://www.wacpeople.com/" target="_blank" style="color:var(--accent);text-decoration:none;">Visit</a></div></div>
+      </div>
+    </div>
     </div>
 
   </div>
@@ -782,9 +809,9 @@ footer {
 
 // TICKER
 const lines = [
-  "Please take your time, there is no rush",
-  "I think in journeys, not just screens",
-  "Hit me up on your ideas",
+  "😊 Please take your time, there is no rush",
+  "🧭 I think in journeys, not just screens",
+  "💬 Hit me up on your ideas",
 ];
 let li = 0;
 const tickerEl = document.getElementById("ticker");
@@ -804,26 +831,25 @@ setInterval(() => {
 
 // TOOLS — STATIC
 const tools = [
-  { name:"Jira", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
-  { name:"Confluence", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" },
-  { name:"Notion", url:"https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
-  { name:"Figma", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name:"GitHub", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-  { name:"Postman", url:"https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-  { name:"Amplitude", url:"https://cdn.worldvectorlogo.com/logos/amplitude-1.svg" },
-  { name:"Claude", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/512px-Claude_AI_logo.svg.png" },
-  { name:"ChatGPT", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png" },
-  { name:"Lovable", url:"https://avatars.githubusercontent.com/u/167901765?s=200&v=4" },
-  { name:"Loom", url:"https://cdn.worldvectorlogo.com/logos/loom-1.svg" },
-  { name:"Swagger", url:"https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png" },
-  { name:"Tawk.to", url:"https://www.tawk.to/wp-content/uploads/2022/09/tawk.to-logo.png" },
-  { name:"Llama", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Llama_%28language_model%29_logo.png/512px-Llama_%28language_model%29_logo.png" },
+  { name:"Jira", emoji:"📋", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+  { name:"Confluence", emoji:"📚", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" },
+  { name:"Notion", emoji:"📝", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" },
+  { name:"Figma", emoji:"🎨", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+  { name:"GitHub", emoji:"🐙", url:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name:"Postman", emoji:"📮", url:"https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+  { name:"Amplitude", emoji:"📊", url:"https://cdn.worldvectorlogo.com/logos/amplitude-1.svg" },
+  { name:"Claude", emoji:"🤖", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" },
+  { name:"ChatGPT", emoji:"💬", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" },
+  { name:"Lovable", emoji:"💖", url:"https://avatars.githubusercontent.com/u/167901765?s=200&v=4" },
+  { name:"Loom", emoji:"🎥", url:"https://cdn.worldvectorlogo.com/logos/loom-1.svg" },
+  { name:"Swagger", emoji:"🧾", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/swagger.svg" },
+  { name:"Tawk.to", emoji:"💬", url:"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tawkdotto.svg" },
 ];
 const grid = document.getElementById("toolsGrid");
 tools.forEach(t => {
   const div = document.createElement("div");
   div.className = "tool-item";
-  div.innerHTML = `<img src="${t.url}" alt="${t.name}" onerror="this.style.display='none'"/><span>${t.name}</span>`;
+  div.innerHTML = `<img src="${t.url}" alt="${t.name}" onerror="this.outerHTML='<span class=&quot;tool-emoji&quot;>${t.emoji}</span>'"/><span>${t.name}</span>`;
   grid.appendChild(div);
 });
 
