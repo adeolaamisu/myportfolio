@@ -762,6 +762,24 @@ footer {
 </footer>
 
 <script>
+// MOBILE NAV TOGGLE
+(function() {
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a.nav-link').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+})();
+
 // TICKER
 const lines = [
   "Please take your time, there is no rush",
