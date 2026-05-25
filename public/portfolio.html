@@ -121,17 +121,27 @@ section { padding: 6.5rem 7%; }
 
 /* HERO */
 #hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: grid;
   grid-template-columns: 1fr 390px;
   gap: 5rem;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 4.5rem;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(140deg, var(--bg) 55%, #EDE4FF 100%);
 }
 
 /* Hero name */
+.hero-im {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--text);
+  margin-right: 0.45rem;
+  vertical-align: baseline;
+  letter-spacing: 0.01em;
+}
 .hero-name {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
@@ -140,9 +150,8 @@ section { padding: 6.5rem 7%; }
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--accent-dark);
-  display: block;
+  display: inline;
   line-height: 1;
-  margin-bottom: 0.5rem;
 }
 .hero-sub-name {
   font-family: var(--body);
@@ -151,7 +160,7 @@ section { padding: 6.5rem 7%; }
   color: var(--muted);
   letter-spacing: 0.04em;
   display: block;
-  margin-bottom: 2rem;
+  margin: 0.75rem 0 2rem;
 }
 
 .hero-bio {
@@ -463,7 +472,7 @@ footer {
 
 <!-- TOP NAV -->
 <nav class="site-nav">
-  <a href="#hero" class="nav-brand">Adeola Tosin</a>
+  <a href="#hero" class="nav-brand">Adeola Tosin Amisu</a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -484,18 +493,18 @@ footer {
     </div>
 
     <h1 style="margin-bottom:0;">
-      <span class="hero-name">ADEOLA TOSIN</span>
+      <span class="hero-im">I'm</span><span class="hero-name">ADEOLA</span>
     </h1>
     <span class="hero-sub-name">Happy you stopped by</span>
 
-    <p class="hero-bio">Product Manager and Growth Strategist, with years of experience delivering web, internal tools and mobile products across iOS and Android. Experienced in Product Ownership, Research, and Agile Delivery.</p>
+    <p class="hero-bio">A Product Manager and Growth Strategist, with years of experience delivering web, internal tools and mobile products across iOS and Android. Experienced in Product Ownership, Research, and Agile Delivery.</p>
 
     <div class="hero-quote">I use AI as a working tool, an acceleration for work, not a replacement for thinking.</div>
 
     <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">Featured Projects</a>
-      <a href="#casestudies" class="btn btn-outline">Case Studies</a>
-      <a href="https://www.linkedin.com/in/ade-lola/" target="_blank" class="btn btn-outline">LinkedIn</a>
+      <a href="#projects" class="btn btn-primary">Projects</a>
+      <a href="#casestudies" class="btn btn-outline">Work</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
     </div>
 
     <div class="hero-stats">
