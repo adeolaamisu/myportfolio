@@ -39,21 +39,24 @@ jobs:
 
       - name: Show build output
         run: |
-          echo "Root files after build:"
+          echo "Root files:"
           ls -la
 
           echo ""
           echo "dist files:"
-          find dist -maxdepth 3 -type f | head -100 || true
+          find dist -maxdepth 4 -type f | head -100 || true
 
           echo ""
-          echo "dist/client files:"
-          find dist/client -maxdepth 3 -type f | head -100 || true
+          echo "dist/client index:"
+          ls -la dist/client/index.html || true
 
       - name: Add SPA fallback
         run: |
           if [ -f dist/client/index.html ]; then
             cp dist/client/index.html dist/client/404.html
+          else
+            echo "dist/client/index.html not found"
+            exit 1
           fi
 
       - name: Upload GitHub Pages artifact
