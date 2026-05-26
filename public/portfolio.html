@@ -250,6 +250,23 @@ section { padding: 6.5rem 7%; }
 }
 @keyframes floatBadge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
 
+.hero-socials {
+  display: flex; justify-content: center; gap: 1rem;
+  margin-top: 1.25rem;
+}
+.hero-socials a {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--card); border: 1px solid var(--border);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--accent-dark); transition: all .2s ease;
+  box-shadow: 0 4px 14px rgba(107,70,160,0.08);
+}
+.hero-socials a:hover {
+  transform: translateY(-3px);
+  background: var(--accent-dark); color: #fff;
+}
+.hero-socials svg { width: 20px; height: 20px; }
+
 /* ABOUT */
 #about {
   background: var(--cream);
@@ -496,7 +513,7 @@ footer {
     <h1 style="margin-bottom:0;">
       <span class="hero-im">I'm</span><span class="hero-name">ADEOLA</span>
     </h1>
-    <span class="hero-sub-name">Happy you stopped by</span>
+    
 
     <p class="hero-bio">A Product Manager and Growth Strategist, with years of experience delivering web, internal tools and mobile products across iOS and Android. Experienced in Product Ownership, Research, and Agile Delivery.</p>
 
@@ -531,6 +548,17 @@ footer {
       <strong>You'll always find me here</strong>
       Stockholm, Sweden
     </div>
+    <div class="hero-socials" aria-label="Social links">
+      <a href="mailto:adeolatosinamisu@gmail.com" title="Email" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="https://hashnode.com/@adeolaamisu" target="_blank" rel="noopener" title="Hashnode" aria-label="Hashnode">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962M12 15.396a3.396 3.396 0 1 1 0-6.792 3.396 3.396 0 0 1 0 6.792"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/ade-lola/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -540,8 +568,11 @@ footer {
   <div class="about-text-wrap fade-in">
     <h2>At the intersection of<br>business, technology and UX.</h2>
     <div class="about-body" style="margin-top:1.25rem;">
-      <p>I'm highly collaborative and naturally empathetic, these qualities have helped me build trust across diverse stakeholders and team mates. I facilitate alignment and bring teams together around a shared vision. Whether stepping into a Scrum Master capacity to keep delivery on track, diving into User Research to uncover actual needs, or driving Product Strategy, I bring a disciplined, goal-oriented approach to every role I take on.</p>
-      <p>I'm energised by working with people; confident in leading conversations; comfortable taking initiative, and skilled at creating the kind of clarity that moves teams forward.</p>
+      <p>I grew up in Nigeria and now live in Sweden, where I'm building my career in product. I genuinely enjoy making people feel good, whether through small moments, positive energy, or simply showing up for the people around me. I'm confident leading conversations, comfortable taking initiative, and naturally drawn to creating clarity in environments where ideas, priorities, or teams may feel scattered.</p>
+      <p>My approach to working with teams is built on transparency, openness, and trust. I believe people do their best work when expectations are clear, communication is honest, and everyone understands the direction. I enjoy facilitating alignment, bringing people together around a shared goal, and creating the kind of structure that helps teams move forward with confidence.</p>
+      <p>I would not describe myself as totally organised. My thinking can sometimes start out messy because I do have many ideas and moving pieces in my head at once. Over time, I've learned to manage this by writing things down, structuring my notes, breaking work into chunks, and consistently revisiting my plans so nothing slips. That has helped me stay thorough, focused, and accountable.</p>
+      <p>I'm highly collaborative and naturally empathetic, qualities that have helped me build strong relationships with diverse stakeholders and teammates. Whether I'm stepping into a Scrum Master capacity to keep delivery on track, diving into user research to understand real needs, or contributing to product strategy, I bring a disciplined, goal-oriented mindset to every team I manage.</p>
+      <p>Outside of work, I enjoy staying active and living a healthy lifestyle. Fitness, outdoor walks, and movement help me reset and stay grounded.</p>
     </div>
   </div>
   <div class="about-img-banner fade-in">
