@@ -250,6 +250,23 @@ section { padding: 6.5rem 7%; }
 }
 @keyframes floatBadge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
 
+.hero-socials {
+  display: flex; justify-content: center; gap: 1rem;
+  margin-top: 1.25rem;
+}
+.hero-socials a {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--card); border: 1px solid var(--border);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--accent-dark); transition: all .2s ease;
+  box-shadow: 0 4px 14px rgba(107,70,160,0.08);
+}
+.hero-socials a:hover {
+  transform: translateY(-3px);
+  background: var(--accent-dark); color: #fff;
+}
+.hero-socials svg { width: 20px; height: 20px; }
+
 /* ABOUT */
 #about {
   background: var(--cream);
