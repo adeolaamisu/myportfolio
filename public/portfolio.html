@@ -303,17 +303,15 @@ section { padding: 6.5rem 7%; }
 #skills::after {
   content: "";
   position: absolute;
-  top: 50%; right: -60px;
-  transform: translateY(-50%);
-  width: 460px; height: 460px;
-  background: url("/skills-watermark.jpg") center/contain no-repeat;
-  opacity: 0.08;
+  inset: 0;
+  background: url("/skills-watermark.jpg") center/cover no-repeat;
+  opacity: 0.18;
   pointer-events: none;
   z-index: 0;
 }
 #skills > * { position: relative; z-index: 1; }
 @media (max-width: 820px) {
-  #skills::after { width: 280px; height: 280px; right: -80px; opacity: 0.06; }
+  #skills::after { opacity: 0.14; }
 }
 .skills-header { margin-bottom: 2.5rem; }
 .skills-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
